@@ -1,0 +1,79 @@
+
+<div class="container">
+  <mat-card>
+    <mat-card-header >
+      <h5 class="text-center"> Alterar Pessoa</h5>
+    </mat-card-header>
+    <form class="example-form" [formGroup]="formulario" (ngSubmit)="alterar()"  novalidate >
+      <input
+        type="hidden"
+        formControlName = "id"
+      >
+      <br>
+      <mat-form-field class="example-full-width">
+        <input
+          matInput
+          placeholder="Nome"
+          formControlName = "nome"
+          [errorStateMatcher]="matcher"
+          autocomplete="off"
+        >
+        <mat-error *ngIf="formulario.controls['nome'].hasError('required')">
+          Campo Obrigatório.
+        </mat-error>
+      </mat-form-field>
+      <br>
+      <br>
+      <mat-form-field class="example-full-width">
+        <input
+          matInput
+          placeholder="CPF"
+          formControlName = "CPF"
+          [errorStateMatcher]="matcher"
+          autocomplete="off"
+          mask='000.000.000-00'
+        >
+        <mat-error *ngIf="formulario.controls['CPF'].hasError('required')">
+          Campo Obrigatório.
+        </mat-error>
+      </mat-form-field>
+      <br>
+      <br>
+      <mat-form-field class="example-full-width">
+        <input
+          matInput
+          placeholder="Grupo"
+          formControlName = "grupo"
+          [errorStateMatcher]="matcher"
+          autocomplete="off"
+        >
+        <mat-error *ngIf="formulario.controls['grupo'].hasError('required')">
+          Campo Obrigatório.
+        </mat-error>
+      </mat-form-field>
+      <br>
+      <br>
+      <mat-form-field class="example-full-width">
+        <input
+          matInput
+          placeholder="Ativo"
+          formControlName = "ativo"
+          [errorStateMatcher]="matcher"
+          autocomplete="off"
+        >
+        <mat-error *ngIf="formulario.controls['ativo'].hasError('required')">
+          Campo Obrigatório.
+        </mat-error>
+      </mat-form-field>
+      <mat-card-actions>
+        <div class="text-center">
+          <div class="button-row">
+            <button type="submit" [disabled]="!formulario.valid" mat-raised-button color="primary">Salvar</button>
+            <a mat-raised-button  (click)="voltar()">Voltar</a>
+          </div>
+        </div>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>
+

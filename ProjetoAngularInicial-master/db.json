@@ -1,0 +1,18 @@
+{
+  "pessoas": [
+    {
+      "id": 1,
+      "nome": "aaaaaa",
+      "CPF": "11111111111",
+      "grupo": "1",
+      "ativo": "1"
+    },
+    {
+      "id": 2,
+      "nome": "glaycow",
+      "CPF": "55352525252",
+      "grupo": "asdsad",
+      "ativo": "1"
+    }
+  ]
+}
