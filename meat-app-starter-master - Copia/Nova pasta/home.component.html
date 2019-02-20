@@ -1,0 +1,56 @@
+
+      <!-- INÍCIO DO CONTEÚDO -->
+      
+      <section class="content-header">
+      </section>
+
+      <section class="content">
+
+        <div class="jumbotron welcome-jumbotron">
+           
+
+          <div class=col-md-12>
+    
+            <form id="form-list-client">
+                    <legend>Lista de Pessoas</legend>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" placeholder="nome/cpf">
+                      </div>   
+            
+                      <div class="pull-right">
+               
+                <a class="btn btn-default-btn-xs btn-success"> Pesquisar  <i class="glyphicon glyphicon-refresh"></i></a>
+                <a class="btn btn-default-btn-xs btn-primary"> Incluir Pessoa  <i class="glyphicon glyphicon-plus"></i></a>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+
+            <div *ngFor="let lista of listas" >
+            
+                <mt-restourant [lista]="lista"></mt-restourant>
+               
+              </div>
+
+
+            </form>
+        
+            
+        </div>
+        
+        
+        <br> 
+
+        <nav aria-label="Navegação de página exemplo">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item active"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Próximo</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </section>
+      <!-- FIM DO CONTEÚDO -->
